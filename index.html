@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<style>
+    *{
+        margin:0;
+        padding: 0;
+        font-weight: bold;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        scroll-behavior: smooth;
+        background-color:none;
+        box-sizing: border-box;
+    }
+   
+
+    .logo{
+        color: #7d2ae8;
+        font-size: 30px;
+        margin-left: 1%;
+        margin-top: 2%; 
+    }
+    .navbar{
+        display: flex;
+        float: right;
+        margin-top:-2%;
+        gap: 25px;
+        margin-right: 2%;
+    }
+    a{
+        color:#7d2ae8;
+        font-size: 30px;
+        text-decoration: none;
+        font-weight: 550;   
+        margin-top: -2%;  
+    }
+    a:hover{
+        color: black;
+        font-size:31px;
+        transition: 0.10s;
+
+    }
+    header{
+        
+        box-shadow: 0 1px 5px #7d2ae8;
+        z-index:0;
+        background-color:aquamarine;
+        margin-top: 0;
+        padding-top: 1px;
+        padding-bottom: 3px;
+        position: sticky;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .logo::first-letter{
+        color:red;
+        text-decoration: overline;
+
+    }
+    .logo:hover{
+        color: black;
+        font-size: 31px;
+        transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    .pharagraph{
+        color:rgb(14, 189, 131);
+        padding-top: 15%;
+        margin-left: 3%;
+        font-size: 30px;
+    }
+    b{
+        font-size: 35px;
+        color:black;
+        text-decoration: underline;
+    }
+    
+    
+    .img{
+        z-index: auto;
+        width: 360px;
+        overflow: hidden;
+        margin-right: 50px;
+        height: 500px;
+        float: right;       
+        border-radius: 20px;
+        margin-top: -20%;
+    }
+    .img:hover{
+        transform: scale(1.2);
+        transition: 0.8s;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+    .icons{
+        display: flex;
+    margin-top: 3%;
+    margin-left: 5%;
+    gap: 8%;
+    color: rgb(45, 94, 77);   
+    }
+    .icons:hover{     
+        color:#7d2ae8 ;
+        font-size: larger;     
+    }
+
+
+    button{
+        background-color: aquamarine;
+        padding: 15px 40px;
+        border: 1px solid #7d2ae8;
+        border-radius: 10px;
+        gap: 1px;
+        margin-left: 3%;
+        margin-top: 2%;
+        font-size: 19px;
+        color: #7d2ae8;
+    }
+    button:hover{
+        background-color:#7d2ae8;
+        color:gold;
+        transform: (1.1, 1,1);
+        transition: 0.5s;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    .about{
+        z-index:1;
+        padding-bottom: 10%;
+    }
+    h2{
+        padding-top: 15%;
+        font-size: 55px;     
+        text-align: left;
+        margin-left: 3%;
+        color:black;
+        font-weight: 600;
+    }
+    .homie{
+        padding-bottom: 5%;
+    }
+    
+    .me{
+        margin-top: 2%;
+        font-size: 28px;
+        margin-left: 3%;
+        width: 65%;
+        color:#7d2ae8;
+        font-weight: 300;
+    }
+    .img-about{
+        z-index: auto;
+        overflow: hidden;
+        transition: transform 0.8s;
+        object-fit: cover;
+        border-radius: 80px;
+        width: 400px;
+        border-radius: 50%;
+        border: 1px solid white;
+        margin-right: 3%;
+        height: 450px;
+        float: right;       
+        margin-top: -28%;   
+    }
+    .img-about:hover img{
+        transform: scale(1.3);
+        transition: 0.8s;
+        filter: drop-shadow(10px 10px 50px white);
+        border-radius: 20px;
+        cursor: pointer;
+    }
+    .service{
+        background:white;
+        width:100%;
+        padding:100px 0px;
+        
+    }
+    .title h3{
+        padding-top: 10%;
+        color: #191919;;
+        font-size:50px;
+        width:1000px;
+        margin:30px auto;
+        text-align: center;
+        margin-bottom: 5%;
+    }
+    .box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height:300px;
+       
+    }
+    .card{
+        border: 1px solid #7d2ae8;
+        height: 300px;
+        width: 350px;
+        padding:4px 20px;
+        background-color:aquamarine;
+        border-radius:20px;
+        margin:15px;
+        position: relative;
+        overflow:hidden;
+        text-align: center;
+    }
+    
+    .card i{
+        font-size: 50px;
+        display: block;
+        text-align: center;
+        margin-top:10%;
+        color:#7d2ae8;
+
+    }
+    h5{
+        color:#7d2ae8;
+        font-size: 35px;
+        margin-bottom:15px;
+    }
+    .pra p{
+        color:black;
+        font-size: 16px;
+        line-height: 27px;
+        margin-bottom:25px;
+        
+    }
+   
+    .card .button{
+        color:black;
+       text-decoration: none;
+       padding: 9px 30px;
+       background:#7d2ae8;
+       border-radius: 30px;
+       border: 1px solid;
+       font-weight: 500;
+       margin-top:-10px;
+       transition: 0.8s;
+       font-size: large;
+    }
+    .button:hover{
+        transition: scale(1.2);
+        background-color:chocolate;
+        color:aquamarine;
+        transform: (1.1, 1,2);
+        transition: 0.5s;
+        font-size: 23px;
+        cursor: pointer;
+    }
+    @keyframes button{
+        50%{
+            transform: translate(20px, 0, 0);
+
+        }
+    }
+    .card:hover{
+        background:black;
+        font-size: x-large;
+        font-weight: 500;
+        background:transparent;
+        cursor: pointer;
+        transition: 1s;
+        transform: scale(1.1);
+    }
+   footer{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;  
+    margin-top: 20%;
+   }
+   h4{
+   text-align: center;
+   font-size: 30px;
+   }
+   .container{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #7d2ae8;
+    padding: 40px 100px;
+    border-radius: 10%;
+    background-color: aquamarine;
+    margin-top: -25%;
+    margin-bottom: -5px;
+   }
+   input, textarea{
+    border: 1px solid #7d2ae8;
+    padding: 10px;
+    outline: none;
+    border-radius: 5px;
+    margin: 5px;
+    color: black;
+    
+   }
+   
+    input:hover{
+        transform: scale(1.1);
+        transition: 0.8s;
+        border-radius: 5px;
+        cursor: pointer;
+   }
+</style>
+<body>
+    <header>
+        <h1 class="logo">Datu-op</h1>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#Contact">Contact</a>
+        </nav>
+        <br>
+    </header>
+<section class="homie" id="home">
+    <div class="pharagraph">
+<p>hello, I'm</p><span><b>Jamer Omar Bandon</b></span>
+<br><i>and I'm</i><br><p>Web Developer, practicing portforlio</p>
+<p>and how to make it responsive. </p>
+    </div>
+
+    <div class="img">
+        <img src="home.png" width="100%" height="90%">
+    </div>
+    <div class="icons">
+        <a href="#"><i class='bx bxl-instagram'></i></a>
+        <a href="#"><i class='bx bxl-tiktok'></i></a>
+        <a href="#"><i class='bx bxl-facebook'></i></a>
+        <a href="#"><i class='bx bxl-twitter' ></i></a>
+    </div>
+    <button onclick="btn">hired me!</button>
+    <button onclick="btn">explore more!</button>
+ </section> 
+
+ <section class="about" id="about"> 
+    <h2>About me</h2>  
+    <div class="me">       
+        <span>From GANI L. ABPI INCORPORATED</span><br>
+        <span1>20 years old, From Pikit North cot.</span1><br>
+        <span3>currently live in datu Piang Maguindanao.</span3><br>
+        <span4>and ofcourse Im IT student, I love IT course</span4><br>
+        <span5>because this is the most indemand course.</span5><br>
+        <span6>My dream is to abroad my course if I fisnish this.</span6>
+    </div>
+
+    <div class="img-about">
+        <img src="picture.jpg" width="100%" height="90%">
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</section>
+
+<section class="Services" id="services">
+        <div class="title">
+            <h3>My Services</h3>
+        </div>
+        
+        <div class="box">
+            <div class="card">
+                <i class="fas fa-bars"></i>
+                <h5>Java Script</h5>
+                <div class="pra">
+                    <p>Important topic to focus on are:
+                        basic syntax, DOM manipulaton, Fetch API, ES6, etc....</p>
+                         <p style="text-align:center;">
+                            <a class="button"href="#">More info.</a> </p>
+                            </div>
+                            </div>
+                            <div class="box">
+                            <div class="card">
+                            <i class="fas fa-bars"></i>
+                            <h5>HTML</h5> 
+                                    <div class="pra">
+                                        <p>Learn the basics, forms and validations.
+                                            You should also focus on conventions &
+                                            best practices.</p>
+                    
+                                             <p style="text-align:center;">
+                                                <a class="button"href="#">Learn more</a> </p>
+                                                </div>
+                                                </div>          
+
+                                                <div class="box">
+                                                    <div class="card">
+                                                        <i class="fas fa-bars"></i>
+                                                        <h5>CSS</h5>
+                                                        <div class="pra">
+                                                            <p>Learn CSS basics, how to make layouts(float, grid,
+                                                                flexbox, etc...) and responsive design.
+                                                            thanks.</p>
+                                                                 <p style="text-align:center;">
+                                                                    <a class="button"href="#"> More info.</a> </p>
+                                                                    </div>
+   <br>
+<br>
+<br>
+<br>                                                                 
+</section>
+<footer>
+    <section class="Contact" id="Contact">
+        <div class="container">
+        <h4>Contact me</h4>
+        <input type="text" placeholder="Gmail">
+        <input type="email" placeholder="Password">
+        <textarea rows="10" placeholder="Ngin reklamo nengka busit?"></textarea>
+        <button onclick="Sent">Sent</button>
+       
+</div>
+<br>
+    </section>
+</footer>
+</body>
+</html>
